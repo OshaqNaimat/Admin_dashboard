@@ -2,3 +2,8 @@
 ::-webkit-scrollbar{
     display: none;
 }
+
+
+.image-bg{
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url("https://www.shutterstock.com/image-photo/spaceman-spacesuit-flight-outer-space-600nw-2556675931.jpg") no-repeat;
+}

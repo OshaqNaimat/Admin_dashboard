@@ -12,13 +12,7 @@ const page = () => {
         <Charts />
       </div>
 
-      <div className="col-span-1">
-        <img
-          width={"100%"}
-          src="https://www.shutterstock.com/image-photo/spaceman-spacesuit-flight-outer-space-600nw-2556675931.jpg"
-          alt=""
-        />
-      </div>
+      <div className="col-span-1 image-bg"></div>
     </div>
   );
 };
