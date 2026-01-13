@@ -2,7 +2,7 @@ import React from "react";
 
 const Table = () => {
   return (
-    <div className="p-4 w-[90%] mx-auto my-3 rounded-md text-white bg-[#192237] rounded-5">
+    <div className="p-4  mx-auto my-3 rounded-md text-white bg-[#192237] rounded-5">
       <h2>Latest Transaction</h2>
       <table className="w-full mt-10">
         <thead>
