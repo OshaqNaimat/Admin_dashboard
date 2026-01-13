@@ -4,7 +4,7 @@ import sidebarData from "../data/SidebarData";
 
 const Sidebar = () => {
   return (
-    <div className="bg-[#192237] sticky left-0 h-[110vh]  overflow-y-scroll min-h-screen col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-2">
+    <div className="bg-[#192237] sticky left-0 h-[90vh]  overflow-y-scroll min-h-screen col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-2">
       <div className="flex text-white  items-center p-5 gap-2 hover:scale-95 hover:bg-gray-900 rounded-md duration-100 transition cursor-pointer">
         <IoMdPerson className="w-10 h-10 rounded-full bg-gray-500 p-3" />
         <div className="flex flex-col">
