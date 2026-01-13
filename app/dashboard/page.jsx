@@ -1,31 +1,25 @@
-import React from "react";
 import Card from "../components/Card";
 import Table from "../components/Table";
 import Charts from "../components/Charts";
 
-const page = () => {
+const Page = () => {
   return (
-    <div className="grid grid-cols-5 px-5 gap-3">
-      <div className="col-span-4">
+    <div className="grid gap-4 lg:grid-cols-4">
+      <div className="lg:col-span-3">
         <Card />
         <Table />
         <Charts />
       </div>
 
-      <div className="col-span-1 text-white image-bg p-4">
-        <div className="flex text-white  gap-4">
-          🔥<h4 className="text-xl font-bold">Available Now</h4>
-        </div>
-        <p className="font-semibold">Lorem ipsum dolor sit amet.</p>
-        <p className="text-gray-400 font-bold">
-          Lorem, ipsum dolor.Lorem, ipsum dolor.
-        </p>
-        <button className="w-full p-3 bg-purple-500 rounded-md mt-2">
-          Available Now
+      <div className="bg-purple-600 text-white p-4 rounded-md">
+        <h4 className="text-xl font-bold mb-2">🔥 Available Now</h4>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <button className="mt-4 w-full bg-black py-2 rounded-md">
+          Upgrade
         </button>
       </div>
     </div>
   );
 };
 
-export default page;
+export default Page;
