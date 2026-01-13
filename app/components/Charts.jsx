@@ -59,37 +59,39 @@ const data = [
 
 export default function Charts() {
   return (
-    <LineChart
-      style={{
-        width: "100%",
-        maxWidth: "90%",
-        height: "100%",
-        maxHeight: "50vh",
-        aspectRatio: 1.618,
-        margin: "auto",
-      }}
-      responsive
-      data={data}
-      margin={{
-        top: 5,
-        right: 0,
-        left: 0,
-        bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
-      <YAxis width="auto" />
-      <Tooltip />
-      <Legend />
-      <Line
-        type="monotone"
-        dataKey="pv"
-        stroke="#8884d8"
-        activeDot={{ r: 8 }}
-      />
-      <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-      <RechartsDevtools />
-    </LineChart>
+    <div className="bg-[#192237] p-5 rounded-md w-[90%] mx-auto">
+      <LineChart
+        style={{
+          width: "100%",
+          maxWidth: "100%",
+          height: "100%",
+          maxHeight: "50vh",
+          aspectRatio: 1.618,
+          margin: "auto",
+        }}
+        responsive
+        data={data}
+        margin={{
+          top: 5,
+          right: 0,
+          left: 0,
+          bottom: 5,
+        }}
+      >
+        {/* <CartesianGrid strokeDasharray="3 3" /> */}
+        <XAxis dataKey="name" />
+        <YAxis width="auto" />
+        <Tooltip />
+        <Legend />
+        <Line
+          type="monotone"
+          dataKey="pv"
+          stroke="#8884d8"
+          activeDot={{ r: 8 }}
+        />
+        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+        <RechartsDevtools />
+      </LineChart>
+    </div>
   );
 }
