@@ -2,6 +2,8 @@ import React from 'react'
 import Sidebar from './components/Sidebar'
 import Navbar from './components/Navbar'
 import Card from './components/Card'
+import Table from './components/Table'
+import Charts from './components/Charts'
 
 const page = () => {
   return (
@@ -10,6 +12,8 @@ const page = () => {
       <div className='col-span-10 '>
       <Navbar/>
       <Card/>
+      <Table/>
+      <Charts/>
       </div>
           </div>
   )
