@@ -10,11 +10,11 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search.."
-            className=" p-2 rounded-md bg-gray-600"
+            className=" p-2 rounded-md bg-gray-600 outline-0"
           />
-          <FaBell />
-          <FaGlobe />
-          <FaChair />
+          <FaBell className="hover:scale-95 cursor-pointer transition" />
+          <FaGlobe className="hover:scale-95 cursor-pointer transition" />
+          <FaChair className="hover:scale-95 cursor-pointer transition" />
         </div>
       </div>
     </div>
