@@ -3,17 +3,19 @@ import { FaBell, FaChair, FaGlobe } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <div className="w-[90%] mx-auto my-5 text-white  bg-[#192237] p-4 rounded-md flex justify-between ">
-      <h2 className="text-xl">Dashboard</h2>
-      <div className="flex items-center gap-3">
-        <input
-          type="text"
-          placeholder="Search.."
-          className="bg-[#192237] p-2 rounded-md"
-        />
-        <FaBell />
-        <FaGlobe />
-        <FaChair />
+    <div className="">
+      <div className="w-[90%] h-10 mx-auto my-5 text-white  bg-[#192237] p-7 rounded-md flex justify-between items-center ">
+        <h2 className="text-xl">Dashboard</h2>
+        <div className="flex justify-between items-center gap-3">
+          <input
+            type="text"
+            placeholder="Search.."
+            className=" p-2 rounded-md bg-gray-600"
+          />
+          <FaBell />
+          <FaGlobe />
+          <FaChair />
+        </div>
       </div>
     </div>
   );

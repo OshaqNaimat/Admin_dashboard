@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
         <Sidebar />
       </div>
       <div className="col-span-12 w-[90%] sm:col-span-6 md:col-span:8 lg:col-span-9 xl:col-span-10">
-        <div className="flex flex-col">
+        <div className=" ">
           <Navbar />
           <div className="w-[90%] mx-auto">{children}</div>
         </div>
