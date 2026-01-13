@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center gap-3">
           <input
             type="text"
-            placeholder="Search.."
+            placeholder="Search..."
             className=" p-2 rounded-md bg-gray-600 outline-0"
           />
           <FaBell className="hover:scale-95 cursor-pointer transition" />
