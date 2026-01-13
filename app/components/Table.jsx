@@ -15,7 +15,10 @@ const Table = () => {
         </thead>
         <tbody>
           {[...Array(5)].map((_, index) => (
-            <tr key={index} className="hover:bg-gray-900 cursor-pointer">
+            <tr
+              key={index}
+              className="hover:bg-gray-900 rounded-md hover:scale-98 transition cursor-pointer"
+            >
               <td className="p-3">Sara</td>
               <td className="p-3">Active</td>
               <td className="p-3">24th Jan 2026</td>
