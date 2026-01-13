@@ -59,7 +59,7 @@ const data = [
 
 export default function Charts() {
   return (
-    <div className="bg-[#192237] p-5 rounded-md  mx-auto">
+    <div className="bg-[#192237] w-[90%] p-5 rounded-md  mx-auto">
       <LineChart
         style={{
           width: "100%",
