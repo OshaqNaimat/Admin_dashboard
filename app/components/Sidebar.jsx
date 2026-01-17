@@ -1,6 +1,6 @@
 import React from "react";
 import { IoMdPerson } from "react-icons/io";
-import sidebarData from "../data/SidebarData";
+import { sidebarData } from "../data/SidebarData";
 
 const Sidebar = () => {
   return (
