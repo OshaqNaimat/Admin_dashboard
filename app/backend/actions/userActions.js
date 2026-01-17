@@ -1,8 +1,8 @@
 "use server"
 
 import { redirect } from "next/navigation"
-import { User } from "../models/userModel"
 import { revalidatePath } from "next/cache"
+import { User } from "../models/userModal"
 
 
 
@@ -14,7 +14,7 @@ export const addData = async ( formData ) => {
     } )
 
 
-    redirect( '/dashboard/users/show-user' )
+    redirect( '/dashboard/user/showUser' )
 
 
 }

@@ -26,13 +26,13 @@ export const sidebarData = [
         id: 2,
         name: "Users",
         icon: <FaUsers />,
-        path: "/dashboard/users",
+        path: "/dashboard/user",
       },
       {
         id: 3,
         name: "Show Users",
         icon: <FaBoxOpen />,
-        path: "/dashboard/users/show-user",
+        path: "/dashboard/user/showUser",
       },
       {
         id: 4,

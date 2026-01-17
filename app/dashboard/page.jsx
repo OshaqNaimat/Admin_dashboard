@@ -19,7 +19,7 @@ const page = () => {
         <div
           style={{
             background:
-              "linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url(https://files.idyllic.app/files/static/2413680?width=256&optimizer=image)",
+              "linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo5I3yoalsC7Ld0LBuRBEPDGINS0XLPP9y8A&s)",
             height: "max-content",
           }}
           className="col-span-1 p-4 text-white image-bg"
