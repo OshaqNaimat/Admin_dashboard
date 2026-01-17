@@ -1,92 +1,93 @@
-import { MdDashboard } from "react-icons/md";
-import { FaUser, FaUsers } from "react-icons/fa";
-import { HiShoppingBag } from "react-icons/hi";
-import { RiExchangeDollarLine } from "react-icons/ri";
-import { MdOutlineAnalytics } from "react-icons/md";
-import { TbReportAnalytics } from "react-icons/tb";
-import { MdGroups } from "react-icons/md";
-import { IoSettingsOutline } from "react-icons/io5";
-import { FiHelpCircle, FiLogOut } from "react-icons/fi";
+import {
+  FaTachometerAlt,
+  FaUsers,
+  FaBoxOpen,
+  FaExchangeAlt,
+  FaChartBar,
+  FaFileAlt,
+  FaUsersCog,
+  FaCog,
+  FaQuestionCircle,
+  FaSignOutAlt,
+} from "react-icons/fa";
 
 export const sidebarData = [
   {
     id: 1,
-    section: "Pages",
-    Lists: [
+    name: "Pages",
+    list: [
       {
         id: 1,
         name: "Dashboard",
-        icon: <MdDashboard />,
+        icon: <FaTachometerAlt />,
         path: "/dashboard",
       },
       {
         id: 2,
         name: "Users",
         icon: <FaUsers />,
-        path: "/users",
+        path: "/dashboard/users",
       },
       {
         id: 3,
-        name: "Products",
-        icon: <HiShoppingBag />,
-        path: "/products",
+        name: "Show Users",
+        icon: <FaBoxOpen />,
+        path: "/dashboard/users/show-user",
       },
       {
         id: 4,
         name: "Transaction",
-        icon: <RiExchangeDollarLine />,
+        icon: <FaExchangeAlt />,
         path: "/transactions",
       },
     ],
   },
   {
     id: 2,
-    section: "Analytics",
-    Lists: [
+    name: "Analytics",
+    list: [
       {
         id: 1,
         name: "Revenue",
-        icon: <MdOutlineAnalytics />,
+        icon: <FaChartBar />,
         path: "/revenue",
       },
       {
         id: 2,
         name: "Reports",
-        icon: <TbReportAnalytics />,
+        icon: <FaFileAlt />,
         path: "/reports",
       },
       {
         id: 3,
         name: "Teams",
-        icon: <MdGroups />,
+        icon: <FaUsersCog />,
         path: "/teams",
       },
     ],
   },
   {
     id: 3,
-    section: "User",
-    Lists: [
+    name: "User",
+    list: [
       {
         id: 1,
         name: "Settings",
-        icon: <IoSettingsOutline />,
+        icon: <FaCog />,
         path: "/settings",
       },
       {
         id: 2,
         name: "Help",
-        icon: <FiHelpCircle />,
+        icon: <FaQuestionCircle />,
         path: "/help",
       },
       {
         id: 3,
         name: "Logout",
-        icon: <FiLogOut />,
-        action: "logout",
+        icon: <FaSignOutAlt />,
+        path: "/logout",
       },
     ],
   },
 ];
-
-export default sidebarData;
