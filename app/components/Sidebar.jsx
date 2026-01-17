@@ -1,7 +1,7 @@
 import React from "react";
 import { FaUser } from "react-icons/fa";
-import { sidebarData } from "../data/sidebarData";
 import Link from "next/link";
+import { sidebarData } from "../data/SidebarData";
 
 const Sidebar = () => {
   return (
