@@ -139,7 +139,7 @@ const UsersTable = async () => {
             {users?.map((user) => (
               <tr
                 key={user.id}
-                className="hover:bg-[#151C2D]/50 transition-colors duration-200"
+                className="hover:bg-[#151C2D]/50 cursor-pointer transition-colors duration-200"
               >
                 <td className="py-4 px-6">
                   <div className="flex items-center gap-3">
@@ -201,9 +201,12 @@ const UsersTable = async () => {
                                                 <Trash2 className="w-4 h-4" />
                                             </button> */}
                       <Button
-                        content={<Trash2 className="w-4 h-4" />}
+                        className=""
+                        content={
+                          <Trash2 className="w-4 h-4 cursor-pointer hover:scale-110 transition" />
+                        }
                         bg={"bg-red-500/30"}
-                        loadingBg={"bg-red-500/80"}
+                        // loadingBg={"bg-red-500/80"}
                         loadingText={"..."}
                       />
                     </form>
