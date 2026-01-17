@@ -5,52 +5,54 @@ import { deleteData } from "@/app/backend/actions/userActions";
 import Button from "@/app/components/Button";
 
 // Mock user data - you'll replace this with your actual data
-const mockUsers = [
-  {
-    id: 1,
-    username: "john_doe",
-    email: "john@example.com",
-    password: "••••••••",
-    phone: "+1 (555) 123-4567",
-    role: "Admin",
-    status: "Active",
-    comments: "System administrator with full access",
-    createdAt: "2024-01-15",
-  },
-  {
-    id: 2,
-    username: "jane_smith",
-    email: "jane@example.com",
-    password: "••••••••",
-    phone: "+1 (555) 987-6543",
-    role: "User",
-    status: "Active",
-    comments: "Regular user account",
-    createdAt: "2024-01-10",
-  },
-  {
-    id: 3,
-    username: "bob_wilson",
-    email: "bob@example.com",
-    password: "••••••••",
-    phone: "+1 (555) 456-7890",
-    role: "User",
-    status: "Inactive",
-    comments: "Account temporarily suspended",
-    createdAt: "2024-01-05",
-  },
-  {
-    id: 4,
-    username: "alice_jones",
-    email: "alice@example.com",
-    password: "••••••••",
-    phone: "+1 (555) 789-0123",
-    role: "Admin",
-    status: "Active",
-    comments: "Marketing department admin",
-    createdAt: "2024-01-01",
-  },
-];
+// const mockUsers = [
+//   {
+//     id: 1,
+//     username: "john_doe",
+//     email: "john@example.com",
+//     password: "••••••••",
+//     phone: "+1 (555) 123-4567",
+//     role: "Admin",
+//     status: "Active",
+//     comments: "System administrator with full access",
+//     createdAt: "2024-01-15",
+//   },
+//   {
+//     id: 2,
+//     username: "jane_smith",
+//     email: "jane@example.com",
+//     password: "••••••••",
+//     phone: "+1 (555) 987-6543",
+//     role: "User",
+//     status: "Active",
+//     comments: "Regular user account",
+//     createdAt: "2024-01-10",
+//   },
+//   {
+//     id: 3,
+//     username: "bob_wilson",
+//     email: "bob@example.com",
+//     password: "••••••••",
+//     phone: "+1 (555) 456-7890",
+//     role: "User",
+//     status: "Inactive",
+//     comments: "Account temporarily suspended",
+//     createdAt: "2024-01-05",
+//   },
+//   {
+//     id: 4,
+//     username: "alice_jones",
+//     email: "alice@example.com",
+//     password: "••••••••",
+//     phone: "+1 (555) 789-0123",
+//     role: "Admin",
+//     status: "Active",
+//     comments: "Marketing department admin",
+//     createdAt: "2024-01-01",
+//   },
+// ];
+
+const totalUsers = users?.length || 0;
 
 const UsersTable = async () => {
   let users = await getData();
@@ -69,7 +71,7 @@ const UsersTable = async () => {
           </div>
         </div>
         <div className="text-right">
-          <p className="text-3xl font-bold text-white">{mockUsers.length}</p>
+          <p className="text-3xl font-bold text-white">{totalUsers}</p>
           <p className="text-gray-400">Total Users</p>
         </div>
       </div>
