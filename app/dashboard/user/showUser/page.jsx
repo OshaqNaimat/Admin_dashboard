@@ -54,7 +54,7 @@ const mockUsers = [
 
 const UsersTable = async () => {
   let users = await getData();
-  console.log(users);
+
   return (
     <div className="p-5 bg-[#192237] rounded-lg shadow-lg">
       {/* Header */}
