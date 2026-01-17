@@ -1,21 +1,18 @@
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 
-export default function DashboardLayout({ children }) {
+export default function RootLayout({ children }) {
   return (
-    <div className="min-h-screen bg-[#151C2D]">
-      <div className="flex">
-        {/* Sidebar */}
-        <aside className="hidden lg:block w-64">
-          <Sidebar />
-        </aside>
-
-        {/* Main content */}
-        <main className="flex-1 min-h-screen">
-          <Navbar />
-          <div className="p-4">{children}</div>
-        </main>
+    <>
+      <div className="grid grid-cols-12">
+        <Sidebar />
+        <div className="col-span-12 sm:col-span-6 md:col-span-8 lg:col-span-9 xl:col-span-10">
+          <div className="flex flex-col">
+            <Navbar />
+            <div className="w-[90%] mx-auto">{children}</div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
