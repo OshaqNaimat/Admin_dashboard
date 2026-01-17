@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache"
 import { redirect } from "next/navigation"
 
 export const addData  = async(formData)=>{
@@ -9,5 +10,12 @@ export const addData  = async(formData)=>{
     })
 
 
-    redirect('/dashboard/users')
+    redirect('/dashboard/users/show-user')
+}
+
+
+export const deleteData = async(formData)=>{
+    let id = formData.get('id')
+    let deleteData = await User.findByIdAndDelete(id)
+    revalidatePath('/dashboard/users/show-user')
 }
