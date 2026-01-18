@@ -3,8 +3,9 @@
 import { redirect } from "next/navigation"
 import { revalidatePath } from "next/cache"
 import { User } from "../models/userModal"
+import { connectDB } from "../connect"
 
-
+connectDB()
 
 export const addData = async ( formData ) => {
     const { username, email, password, phone, status, role, comments } = Object.fromEntries( formData )
