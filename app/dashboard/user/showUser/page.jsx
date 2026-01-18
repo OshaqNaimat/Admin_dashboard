@@ -55,8 +55,9 @@ const mockUsers = [
 
 const totalUsers = mockUsers?.length || 0;
 
-const UsersTable = async () => {
-  let users = await getData();
+const UsersTable = async ({ searchParams }) => {
+  let { name } = await searchParams;
+  let users = await getData(name);
 
   return (
     <div className="p-5 bg-[#192237] rounded-lg shadow-lg">
