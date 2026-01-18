@@ -12,6 +12,9 @@ const Search = () => {
 
   let params = new URLSearchParams(searchParams);
 
+  params.set("name", "thisisatest");
+  replace(`${pathname}?q=${params}`);
+
   return (
     <div>
       <input
