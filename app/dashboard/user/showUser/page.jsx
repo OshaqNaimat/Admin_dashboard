@@ -3,6 +3,7 @@ import { User, Users, Edit, Trash2, CheckCircle, XCircle } from "lucide-react";
 import { getData } from "@/app/backend/data/userData";
 import { deleteData } from "@/app/backend/actions/userActions";
 import Button from "@/app/components/Button";
+import Search from "@/app/components/Search";
 
 // Mock user data - you'll replace this with your actual data
 const mockUsers = [
@@ -71,7 +72,7 @@ const UsersTable = async () => {
           </div>
         </div>
         <div className="text-right">
-          <p className="text-3xl font-bold text-white">{totalUsers}</p>
+          <p className="text-3xl font-bold text-white">{users.length}</p>
           <p className="text-gray-400">Total Users</p>
         </div>
       </div>
@@ -80,11 +81,7 @@ const UsersTable = async () => {
       <div className="flex flex-col md:flex-row gap-4 mb-6">
         <div className="flex-1">
           <div className="relative">
-            <input
-              type="text"
-              placeholder="Search users by name, email, or phone..."
-              className="w-full bg-[#151C2D] text-gray-300 rounded-lg py-3 px-4 pl-12 outline-none focus:ring-2 focus:ring-blue-500"
-            />
+            <Search />
             <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
               <User className="w-5 h-5 text-gray-400" />
             </div>
@@ -95,7 +92,7 @@ const UsersTable = async () => {
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-green-400" />
               <span className="text-white font-semibold">
-                {mockUsers.filter((u) => u.status === "Active").length}
+                {users.filter((u) => u.status === "Active").length}
               </span>
               <span className="text-gray-400">Active</span>
             </div>
@@ -104,7 +101,7 @@ const UsersTable = async () => {
             <div className="flex items-center gap-2">
               <XCircle className="w-4 h-4 text-red-400" />
               <span className="text-white font-semibold">
-                {mockUsers.filter((u) => u.status === "Inactive").length}
+                {users.filter((u) => u.status === "Inactive").length}
               </span>
               <span className="text-gray-400">Inactive</span>
             </div>
@@ -224,10 +221,8 @@ const UsersTable = async () => {
       <div className="flex items-center justify-between mt-6">
         <div className="text-gray-400">
           Showing <span className="text-white font-semibold">1</span> to{" "}
-          <span className="text-white font-semibold">{mockUsers.length}</span>{" "}
-          of{" "}
-          <span className="text-white font-semibold">{mockUsers.length}</span>{" "}
-          users
+          <span className="text-white font-semibold">{users.length}</span> of{" "}
+          <span className="text-white font-semibold">{users.length}</span> users
         </div>
         <div className="flex gap-2">
           <button className="px-4 py-2 bg-[#151C2D] text-gray-300 rounded-lg hover:bg-gray-800 transition-colors">
